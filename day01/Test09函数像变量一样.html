@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		//函数可作为参数
+		/* function add(x,y){
+			return x+y;
+		}
+		var n = add;
+		console.log(n(3,4)) */
+		/* function f( a ){
+			console.log(a(1,2));
+		}
+		f(add); */
+		//函数可作为返回值
+		/* function a(){
+			console.log("a被执行");
+		}
+		
+		function b(){
+			return a;
+			
+		}
+		
+		function c(){
+			return b;
+			
+		}
+		c()()(); */
+		//匿名函数 直接被调用
+		/* (function (x,y){
+			console.log("调用成功")
+			return x+y;
+		})(1,2);
+		(function (x,y){
+			console.log("调用成功")
+			return x+y;
+		}(1,2)); */
+		/* var t = function (x,y){
+			return x+y;
+		}
+		console.log(t(2,3)); */
+		//可变长度参数
+		/* function add(a,b=0,c=0,d=0){
+			return a+b+c+d;
+		} */
+		//法一：使用...运算符
+	/* 	function add(...arr){
+			var sum = 0;
+			for(i=0;i<arr.length;i++){
+				sum = sum +arr[i];
+			}
+			return sum;
+		} */
+		//法二：argument代表所有参数形成的数组
+		function add(){
+				var sum = 0;
+				for(i=0;i<arguments.length;i++){
+					sum = sum +arguments[i];
+				}
+				return sum;
+			}
+		console.log(add(1));
+		console.log(add(1,2));
+		console.log(add(1,2,3));
+		console.log(add(1,2,3,4));
+		</script>
+	</body>
+</html>
