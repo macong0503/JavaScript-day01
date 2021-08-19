@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		
+		var arr = [1,2,3,4,5];
+		for(index in arr){
+			console.log(index,"-->",arr[index]);
+		}
+		console.log("-------");
+		for(a of arr){
+			console.log(a);
+		}
+		console.log("-------");
+		arr.forEach(function(item){console.log(item)})
+		/* //指定删除的开始的位置和删除的个数
+		var result = arr.splice(2,3);
+		console.log(arr);
+		console.log(result) */
+		//压入
+		/* arr.push(999);
+		console.log(arr);
+		//弹出
+		var a = arr.pop();
+		console.log(arr);
+		console.log(a);
+		//从首位弹出
+		arr.shift();
+		console.log(arr);
+		//从首位压入
+		arr.unshift("999");
+		console.log(arr); */
+		/* var arr = [1,2,3,4,5];
+		var brr = ["张三","李四","王五","赵六"];
+		//连接两个数组
+		var crr = arr.concat(brr)
+		console.log(crr);
+		//用指定的符号去串联每个元素
+		var drr = arr.join("#@");
+		console.log(drr);
+		//翻转
+		var err = arr.reverse();
+		console.log(arr);
+		console.log(err); */
+		/* var names = new Array(1,2,3,4);
+		
+		console.log(names[1]);
+		console.log(names[10]);
+		
+		names[10]="小明";
+		console.log(names[10]);
+		console.log(names);
+		console.log("------------")
+		for (i=0;i<names.length;i++) {
+			console.log(names[i]);
+		} */
+		/* //法一：给出每个元素
+		var names = new Array(1,2,3,4);
+		console.log(names[3]);
+		console.log(typeof names)
+		console.log("-----------")
+		//法二：给出长度
+		var names = Array(10);
+		console.log(names.length);
+		console.log(typeof names)
+		console.log("-----------")
+		//法三：方括号内 给出每个元素
+		var names = [1,2,3];
+		console.log(names[2]);
+		console.log(typeof names)
+		console.log("-----------") */
+		</script>
+	</body>
+</html>
